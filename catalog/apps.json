@@ -1,0 +1,95 @@
+{
+  "apps": [
+    {
+      "name": "Prism Launcher",
+      "publisher": "PrismLauncher",
+      "description": "Свободный лаунчер для Minecraft с поддержкой Fabric, Forge, Quilt и NeoForge. Позволяет держать сколько угодно параллельных сборок с разными модами и версиями игры, не мешая друг другу, импортировать/экспортировать инстансы и управлять несколькими аккаунтами Microsoft.",
+      "homepageUrl": "https://prismlauncher.org/",
+      "category": "Games",
+      "flathubId": "org.prismlauncher.PrismLauncher",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/prismlauncher.svg",
+      "accentBrush": "#2B2A33",
+      "resolver": "GitHubLatest",
+      "gitHubOwner": "PrismLauncher",
+      "gitHubRepo": "PrismLauncher",
+      "assetPattern": "windows.*msvc.*setup.*\\.exe$"
+    },
+    {
+      "name": "OBS Studio",
+      "publisher": "OBS Project",
+      "description": "Бесплатный инструмент с открытым исходным кодом для записи видео и трансляций. Неограниченное число сцен и источников, поканальное сведение звука, шумоподавление, плагины и запись в высоком качестве без вотемарок и ограничений по времени.",
+      "homepageUrl": "https://obsproject.com/",
+      "category": "Media",
+      "flathubId": "com.obsproject.Studio",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/obsstudio.svg",
+      "accentBrush": "#302E68",
+      "resolver": "GitHubLatest",
+      "gitHubOwner": "obsproject",
+      "gitHubRepo": "obs-studio",
+      "assetPattern": "windows.*installer.*\\.exe$|\\.exe$"
+    },
+    {
+      "name": "qBittorrent",
+      "publisher": "qBittorrent project",
+      "description": "Кроссплатформенный BitTorrent-клиент на Qt, полностью бесплатный, без рекламы и стороннего ПО в комплекте. Есть встроенный поиск по торрентам, RSS-загрузчик по расписанию и веб-интерфейс для удалённого управления с телефона или другого ПК.",
+      "homepageUrl": "https://www.qbittorrent.org/",
+      "category": "Utilities",
+      "flathubId": "org.qbittorrent.qBittorrent",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/qbittorrent.svg",
+      "accentBrush": "#2F6FED",
+      "resolver": "GitHubLatest",
+      "gitHubOwner": "qbittorrent",
+      "gitHubRepo": "qBittorrent",
+      "assetPattern": "x64.*setup.*\\.exe$"
+    },
+    {
+      "name": "Steam",
+      "publisher": "Valve",
+      "description": "Платформа Valve для покупки, установки и запуска игр: автоматические обновления, облачные сохранения, достижения, встроенный чат и голосовая связь с друзьями, мастерская модов и режим удалённого запуска игр на другие устройства.",
+      "homepageUrl": "https://store.steampowered.com/about/",
+      "category": "Games",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/steam.svg",
+      "accentBrush": "#1B2838",
+      "resolver": "Static",
+      "staticUrl": "https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe",
+      "staticFileName": "SteamSetup.exe"
+    },
+    {
+      "name": "NVIDIA App",
+      "publisher": "NVIDIA",
+      "description": "Единый центр управления видеокартами NVIDIA взамен GeForce Experience: обновление драйверов, игровые профили с оптимальными настройками под конкретную игру, запись геймплея через Instant Replay и фильтры для стриминга и записи.",
+      "homepageUrl": "https://www.nvidia.com/en-us/software/nvidia-app/",
+      "category": "Utilities",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/nvidia.svg",
+      "accentBrush": "#76B900",
+      "resolver": "Static",
+      "staticUrl": "https://us.download.nvidia.com/nvapp/client/11.0.8.299/NVIDIA_app_v11.0.8.299.exe",
+      "staticFileName": "NVIDIA_app_setup.exe"
+    },
+    {
+      "name": "Telegram",
+      "publisher": "Telegram FZ-LLC",
+      "description": "Быстрый мессенджер с облачной синхронизацией истории сообщений на всех устройствах, каналами и группами до 200 000 участников, секретными чатами с end-to-end шифрованием и самоуничтожающимися сообщениями.",
+      "homepageUrl": "https://desktop.telegram.org/",
+      "category": "Communication",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/telegram.svg",
+      "accentBrush": "#2AABEE",
+      "resolver": "Static",
+      "staticUrl": "https://telegram.org/dl/desktop/win64",
+      "staticFileName": "telegram-setup.exe"
+    },
+    {
+      "name": "Throne",
+      "publisher": "throneproj",
+      "description": "Компактный менеджер приложений с открытым исходным кодом: отслеживает GitHub-релизы программ из вашего списка и обновляет их одним кликом, без ручного поиска новых версий.",
+      "homepageUrl": "https://github.com/throneproj/Throne",
+      "category": "Utilities",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/throne.ico",
+      "accentBrush": "#2B2A33",
+      "resolver": "GitHubLatest",
+      "gitHubOwner": "throneproj",
+      "gitHubRepo": "Throne",
+      "assetPattern": "(x64.*setup.*\\.exe|\\.msi)$"
+    }
+  ]
+}
