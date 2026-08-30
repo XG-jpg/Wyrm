@@ -4,24 +4,32 @@
       "name": "Prism Launcher",
       "sourceUrl": "https://github.com/PrismLauncher/PrismLauncher",
       "category": "Games",
-      "flathubId": "org.prismlauncher.PrismLauncher"
+      "flathubId": "org.prismlauncher.PrismLauncher",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/prismlauncher.svg",
+      "accentBrush": "#2B2A33"
     },
     {
       "name": "OBS Studio",
       "sourceUrl": "https://github.com/obsproject/obs-studio",
       "category": "Media",
-      "flathubId": "com.obsproject.Studio"
+      "flathubId": "com.obsproject.Studio",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/obsstudio.svg",
+      "accentBrush": "#302E68"
     },
     {
       "name": "qBittorrent",
       "sourceUrl": "https://github.com/qbittorrent/qBittorrent",
       "category": "Utilities",
-      "flathubId": "org.qbittorrent.qBittorrent"
+      "flathubId": "org.qbittorrent.qBittorrent",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/qbittorrent.svg",
+      "accentBrush": "#2F6FED"
     },
     {
       "name": "Throne",
       "sourceUrl": "https://github.com/throneproj/Throne",
-      "category": "Utilities"
+      "category": "Utilities",
+      "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/throne.ico",
+      "accentBrush": "#2B2A33"
     },
     {
       "name": "Steam",
