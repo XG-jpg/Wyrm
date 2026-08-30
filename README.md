@@ -1,33 +1,46 @@
 # Wyrm
 
-Каталог приложений и релизы для [Wyrm](catalog/apps.json) — портативного установщика приложений для Windows.
+Каталог приложений для [Wyrm](catalog/apps.json) — портативного установщика приложений для Windows.
 
-## Как добавить приложение в каталог
+## Как добавить приложение
 
-Отредактируйте `catalog/apps.json`, добавьте объект в массив `apps`:
+Отредактируйте `catalog/apps.json`, добавьте объект в массив `apps`. Нужно только два поля:
 
 ```json
 {
   "name": "Название приложения",
-  "publisher": "Издатель",
-  "description": "Короткое описание.",
-  "homepageUrl": "https://example.com",
+  "sourceUrl": "https://github.com/owner/repo"
+}
+```
+
+Всё остальное (описание, издатель, иконка, ссылка на установщик) Wyrm вычисляет сам:
+
+- Если `sourceUrl` — ссылка на репозиторий GitHub (`github.com/owner/repo`), Wyrm берёт установщик из последнего релиза, а описание/издателя/иконку — из GitHub API (аватар владельца репозитория как запасная иконка).
+- Если `sourceUrl` — обычная домашняя страница приложения (например, `https://example.com`), Wyrm сканирует её HTML и сам находит на странице ссылку на инсталлятор (`.exe`/`.msi` или что-то с "download"/"setup" в адресе), а также og:title/og:description/og:image как описание и иконку.
+
+Это эвристика, а не гарантия — сайты, которые собирают ссылку на скачивание через JavaScript, автосканированием не берутся. Для таких случаев любое поле можно переопределить вручную:
+
+```json
+{
+  "name": "NVIDIA App",
+  "sourceUrl": "https://www.nvidia.com/en-us/software/nvidia-app/",
+  "publisher": "NVIDIA",
   "category": "Utilities",
-  "flathubId": "org.example.App",
-  "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/example.svg",
-  "accentBrush": "#2F6FED",
-  "resolver": "GitHubLatest",
-  "gitHubOwner": "owner",
-  "gitHubRepo": "repo",
-  "assetPattern": "windows.*setup.*\\.exe$"
+  "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/nvidia.svg",
+  "accentBrush": "#76B900",
+  "downloadUrl": "https://prямая-ссылка-на-инсталлятор"
 }
 ```
 
 Поля:
 
-- `category` — одно из: `Games`, `Media`, `Communication`, `Utilities`.
-- `resolver` — `GitHubLatest` (ссылка на установщик берётся из последнего релиза GitHub-репозитория по `assetPattern`) или `Static` (прямая ссылка на файл через `staticUrl`/`staticFileName`).
-- `iconUrl` — прямая ссылка на иконку (svg/png/ico). Положите файл в `catalog/icons/` и сошлитесь на него через `raw.githubusercontent.com`.
-- `flathubId` необязателен — если указан, скриншоты для деталь-панели подтягиваются с Flathub.
+- `sourceUrl` (обязательно) — ссылка на GitHub-репозиторий или домашнюю страницу приложения.
+- `downloadUrl` — прямая ссылка на файл, если автосканирование страницы не находит нужную ссылку.
+- `category` — одно из: `Games`, `Media`, `Communication`, `Utilities` (по умолчанию `Utilities`).
+- `publisher`, `description`, `iconUrl`, `accentBrush` — переопределяют автоматически найденные значения.
+- `flathubId` — если указан, скриншоты для деталь-панели подтягиваются с Flathub.
+- `assetPattern` — регулярка для выбора нужного файла среди ассетов GitHub-релиза, если угадывается неверно (по умолчанию Wyrm сам ищёт `.exe`/`.msi` с "win" в имени).
 
-Присылайте PR с изменением `catalog/apps.json` (и, если нужно, новым файлом иконки) — Wyrm подхватывает изменения из `main` в течение нескольких часов (кэш каталога на стороне приложения).
+Иконки для оверрайдов кладите в `catalog/icons/` и ссылайтесь на них через `raw.githubusercontent.com`.
+
+Присылайте PR с изменением `catalog/apps.json` — Wyrm подхватывает изменения из `main` в течение нескольких часов (кэш каталога на стороне приложения).
