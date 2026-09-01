@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "Prism Launcher",
-      "sourceUrl": "https://github.com/PrismLauncher/PrismLauncher",
+      "wingetId": "PrismLauncher.PrismLauncher",
       "category": "Games",
       "flathubId": "org.prismlauncher.PrismLauncher",
       "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/prismlauncher.svg",
@@ -10,7 +10,7 @@
     },
     {
       "name": "OBS Studio",
-      "sourceUrl": "https://github.com/obsproject/obs-studio",
+      "wingetId": "OBSProject.OBSStudio",
       "category": "Media",
       "flathubId": "com.obsproject.Studio",
       "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/obsstudio.svg",
@@ -18,7 +18,7 @@
     },
     {
       "name": "qBittorrent",
-      "sourceUrl": "https://github.com/qbittorrent/qBittorrent",
+      "wingetId": "qBittorrent.qBittorrent",
       "category": "Utilities",
       "flathubId": "org.qbittorrent.qBittorrent",
       "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/qbittorrent.svg",
@@ -26,23 +26,21 @@
     },
     {
       "name": "Throne",
-      "sourceUrl": "https://github.com/throneproj/Throne",
+      "wingetId": "Throneproj.Throne",
       "category": "Utilities",
       "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/throne.ico",
       "accentBrush": "#2B2A33"
     },
     {
       "name": "Steam",
-      "sourceUrl": "https://store.steampowered.com/about/",
-      "publisher": "Valve",
+      "wingetId": "Valve.Steam",
       "category": "Games",
       "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/steam.svg",
-      "accentBrush": "#1B2838",
-      "downloadUrl": "https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe"
+      "accentBrush": "#1B2838"
     },
     {
       "name": "NVIDIA App",
-      "sourceUrl": "https://www.nvidia.com/en-us/software/nvidia-app/",
+      "wingetId": "XP8CLZL93F5Z4P",
       "publisher": "NVIDIA",
       "category": "Utilities",
       "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/nvidia.svg",
@@ -50,12 +48,10 @@
     },
     {
       "name": "Telegram",
-      "sourceUrl": "https://desktop.telegram.org/",
-      "publisher": "Telegram FZ-LLC",
+      "wingetId": "Telegram.TelegramDesktop",
       "category": "Communication",
       "iconUrl": "https://raw.githubusercontent.com/XG-jpg/Wyrm/main/catalog/icons/telegram.svg",
-      "accentBrush": "#2AABEE",
-      "downloadUrl": "https://telegram.org/dl/desktop/win64"
+      "accentBrush": "#2AABEE"
     }
   ]
 }
